@@ -1,16 +1,19 @@
-# NANN — primeira versão visual
+# NANN — Protótipo inicial
 
-Projeto inicial responsivo para publicar na Vercel.
+Este pacote contém a primeira interface estática da plataforma NANN e a especificação consolidada dos requisitos aprovados.
 
-## O que já funciona nesta demonstração
-- Navegação pelas seções.
-- Seleção local de arquivo de áudio, vídeo e imagem de capa para testar o player.
-- Votação e publicações demonstrativas no navegador.
-- Busca simples na página.
-- Links externos para Spotify, YouTube e Instagram.
+## Arquivos
+- `index.html` — estrutura da interface.
+- `style.css` — identidade visual escura com tons laranja/âmbar.
+- `app.js` — interações locais demonstrativas.
+- `ESPECIFICACAO-PLATAFORMA.md` — requisitos funcionais e comportamento esperado do assistente Nann.
 
-## O que ainda precisa de integração
-Login/cadastro real, banco de dados, votos persistentes, comunidade compartilhada, painel administrativo e armazenamento permanente de mídia. Os votos e posts desta versão são locais e demonstrativos.
+## Como visualizar
+Abra `index.html` em um navegador ou publique os arquivos em um serviço de hospedagem estática.
 
-## Publicação
-Este é um projeto estático. Na Vercel, importe o repositório GitHub e use as configurações padrão para um site estático.
+## Importante: o que ainda não é funcional
+Esta é uma demonstração front-end. Não possui autenticação real, banco de dados, upload persistente, votos ou comunidade sincronizados entre usuários, painel administrativo conectado, nem IA funcional. Os controles atuais funcionam apenas localmente ou como demonstração. Para produção, será necessário implementar backend, banco de dados, armazenamento de mídia e integração segura com a API de IA.
+
+O avatar original do personagem Nann não está incluído neste pacote. Não substitua por um personagem recriado; integre o arquivo original aprovado quando estiver disponível.
+
+Consulte `ESPECIFICACAO-PLATAFORMA.md` para o escopo consolidado.
