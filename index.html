@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#100b08" />
+  <meta name="description" content="NANN — Música, comunidade e conquistas." />
+  <title>NANN — Música, comunidade e conquistas</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="NANN início">
+        <span class="crown">♛</span><strong>NANN</strong>
+        <small>Música • Comunidade • Conquistas</small>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-link active" href="#inicio">⌂ <span>Início</span></a>
+        <a class="nav-link" href="#musicas">♫ <span>Músicas</span></a>
+        <a class="nav-link" href="#votacao">▥ <span>Votações</span></a>
+        <a class="nav-link" href="#comunidade">♧ <span>Comunidade</span></a>
+        <a class="nav-link" href="#chat">● <span>Chat com NANN</span></a>
+        <a class="nav-link" href="#perfil">♙ <span>Meu perfil</span></a>
+      </nav>
+      <div class="social">
+        <b>Conecte-se</b>
+        <div class="social-links">
+          <a href="https://open.spotify.com/" target="_blank" rel="noreferrer" aria-label="Spotify">Spotify</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">YouTube</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+      <div class="join-card">
+        <span class="crown">♛</span>
+        <h3>Faça parte do universo NANN!</h3>
+        <p>Ouça, vote, interaja e faça parte dessa história.</p>
+        <a class="button button-orange" href="#perfil">Entrar agora →</a>
+      </div>
+      <p class="sidebar-foot">NANN © <span id="year"></span></p>
+    </aside>
+
+    <main class="content" id="inicio">
+      <header class="topbar">
+        <label class="search">⌕ <input id="searchInput" type="search" placeholder="Buscar músicas, artistas ou novidades..." /></label>
+        <div class="top-actions"><span class="notification" title="Notificações">♧</span><a class="profile-chip" href="#perfil">● <span>Olá, fã!</span></a></div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">BEM-VINDO AO UNIVERSO NANN</div>
+          <h1>Música que conecta,<br/><em>comunidade que cresce.</em></h1>
+          <p>Descubra sons, participe das escolhas e acompanhe cada lançamento.</p>
+          <div class="hero-actions">
+            <a class="button button-orange" href="#musicas">▶ Ouvir agora</a>
+            <a class="button button-outline" href="#comunidade">Conheça a comunidade →</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Arte de destaque NANN">
+          <div class="sound-ring ring-one"></div><div class="sound-ring ring-two"></div>
+          <div class="hero-mark">NANN<span>♛</span></div>
+          <p>MÚSICA • IDENTIDADE • CONEXÃO</p>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel release-panel" id="musicas">
+          <div class="panel-heading"><h2>🔥 Lançamentos em destaque</h2><a href="#musicas">Ver todos →</a></div>
+          <div class="release-content">
+            <div class="cover-art"><span>♛</span><b>NANN</b><small>SUA PRÓXIMA FAIXA</small></div>
+            <div class="release-info">
+              <span class="tag">DESTAQUE</span>
+              <h3>Seu próximo lançamento</h3><p>Adicione aqui a descrição da música.</p>
+              <div class="player-tabs"><button class="tab active" data-mode="audio">♫ Áudio</button><button class="tab" data-mode="video">▷ Vídeo</button></div>
+              <div class="media-frame" id="mediaFrame">
+                <div class="media-placeholder" id="mediaPlaceholder"><span>▶</span><b>Imagem de capa / player</b><small>O áudio ou vídeo aparecerá aqui.</small></div>
+                <audio id="audioPlayer" controls hidden></audio>
+                <video id="videoPlayer" controls playsinline hidden></video>
+              </div>
+              <div class="upload-controls">
+                <label class="upload-button">Adicionar áudio <input id="audioUpload" type="file" accept="audio/*" /></label>
+                <label class="upload-button">Adicionar vídeo <input id="videoUpload" type="file" accept="video/*" /></label>
+                <label class="upload-button">Imagem de capa <input id="coverUpload" type="file" accept="image/*" /></label>
+              </div>
+            </div>
+          </div>
+          <p class="hint">Arquivos selecionados são exibidos nesta sessão de demonstração. O envio permanente será ligado ao painel de artista na próxima etapa.</p>
+        </article>
+
+        <article class="panel poll-panel" id="votacao">
+          <div class="panel-heading"><h2>▥ Os fãs escolhem!</h2><span class="tag">VOTAÇÃO DEMO</span></div>
+          <p class="question">Qual deve ser o próximo lançamento?</p>
+          <form id="pollForm" class="poll-options">
+            <label><input type="radio" name="song" value="Sonho Real" required /> <span>Sonho Real</span></label>
+            <label><input type="radio" name="song" value="Vida de Artista" /> <span>Vida de Artista</span></label>
+            <label><input type="radio" name="song" value="Deixa Fluir" /> <span>Deixa Fluir</span></label>
+            <button class="button button-orange" type="submit">Registrar meu voto →</button>
+          </form>
+          <p class="hint" id="pollMessage">Demonstração local: os votos não são enviados a um servidor.</p>
+        </article>
+
+        <article class="panel community-panel" id="comunidade">
+          <div class="panel-heading"><h2>♧ Comunidade</h2><span class="tag">ESPAÇO DE FÃS</span></div>
+          <p class="question">O que você achou do último som?</p>
+          <form id="postForm" class="post-form"><textarea id="postText" rows="3" maxlength="240" placeholder="Escreva uma mensagem para a comunidade..."></textarea><button class="button button-orange" type="submit">Publicar</button></form>
+          <div id="posts" class="posts"><div class="post"><b>Fã da NANN</b><p>Ansioso pelos próximos lançamentos! 🔥</p><small>Publicação de exemplo</small></div></div>
+        </article>
+      </section>
+
+      <section class="bottom-grid">
+        <article class="panel chat-banner" id="chat"><div><span class="tag">ASSISTENTE NANN</span><h2>Fale com o NANN</h2><p>Tire dúvidas e descubra mais sobre as músicas.</p><button class="button button-orange" id="chatButton">Abrir conversa →</button></div><div class="chat-orb">N<span>♛</span></div></article>
+        <article class="panel profile-panel" id="perfil"><h2>Seu espaço musical</h2><p>Entre para acompanhar suas interações, votos e conquistas.</p><button class="button button-outline" id="profileButton">Acessar perfil</button><p class="hint" id="profileMessage">Cadastro e login serão conectados ao serviço de autenticação na próxima etapa.</p></article>
+      </section>
+      <footer class="footer">NANN — Música, comunidade e conquistas.</footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
